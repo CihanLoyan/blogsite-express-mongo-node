@@ -6,11 +6,11 @@ app.set('view engine', 'ejs')
 app.listen(3000)
 
 app.get('/', (req, res) => {
-    res.render('index')
+    res.render('index', {title: 'Anasayfa'})
 })
 
 app.get('/about', (req, res) => {
-    res.render('about')
+    res.render('about', {title: 'Hakkımızda'})
 })
 
 app.get('/about-us', (req, res) => {
@@ -18,5 +18,5 @@ app.get('/about-us', (req, res) => {
 })
 
 app.get('*', (req, res) => {
-    res.status(404).render('404')
+    res.status(404).render('404', {title: `${res.statusCode} Not Found !`})
 })
