@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%-include('./inc/head')%>
+</head>
+
+<body>
+    <%-include('./inc/navbar')%>
+        <section class="admin__class">
+            <a href="admin/add">
+                <button type="button">
+                    <span class="button__text">Yeni Yazı Ekle</span> 
+                    <span class="button__icon">
+                        <i class="far fa-plus-square"></i>
+                    </span> 
+                </button>
+            </a>
+            <h1>Yazılar</h1>
+            <hr>
+            <ul>
+                <% blogs.forEach(blog => { %>
+                    <li>
+                        <a href='/blog/<%= blog._id %> '><%= blog.title %> </a>
+                        <p><%= blog.short %> </p>  
+                        <button type="button" class="del" data-doc="<%= blog._id %>">
+                            <span class="button__text">Sil</span> 
+                            <span class="button__icon">
+                                <i class="fas fa-eraser"></i>
+                            </span>
+                        </button>
+                    </li>
+                <%} ) %>
+            </ul>
+        </section>
+
+        <script>
+            const del = document.querySelectorAll('button.del')
+
+            const delLinks = [].slice.call(del)
+            delLinks.forEach((item, i) => {
+                item.addEventListener('click', (e) => {
+                const endpoint = `/admin/delete/${item.dataset.doc}`
+
+                fetch(endpoint, {method: 'DELETE'})
+                    .then((response) => response.json())
+                    .then((data) => window.location.href = data.link)
+                    .catch((err) => console.log(err))
+
+                })
+            })
+
+        </script>
+
+</body>
+
+</html>

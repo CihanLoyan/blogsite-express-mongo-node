@@ -1,0 +1,12 @@
+<nav>
+    <h1>Express Web Service</h1>
+    <ul>
+        <li><a href="/">Anasayfa</a></li>
+        <li><a href="/about">Hakkımızda</a></li>
+        <% if(user) {%>
+            <li><a href="/logout">Çıkış</a></li>
+        <% }else { %>
+            <li><a href="/login">Giriş Yap</a></li>
+        <% } %> 
+    </ul>
+</nav>

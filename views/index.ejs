@@ -6,7 +6,19 @@
 </head>
 
 <body>
-    <h1>Ana Sayfa</h1>
+    <%-include('./inc/navbar')%>
+        <section>
+            <h1>Yazılar</h1>
+            <hr>
+            <ul>
+                <% blogs.forEach(blog => { %>
+                    <li>
+                        <a href='/blog/<%= blog._id %> '><%= blog.title %> </a>
+                        <p><%= blog.short %> </p>
+                    </li>
+                <%} ) %>
+            </ul>
+        </section>
 </body>
 
 </html>
