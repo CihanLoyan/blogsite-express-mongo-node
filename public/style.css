@@ -84,6 +84,10 @@ section p {
 
 }
 
+section form h1 {
+    text-align: center;
+}
+
 .admin__class a {
     display: flex;
     justify-content: space-between;
