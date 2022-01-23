@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    background-color: #006666;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: 0px 5px 10px 0 rgba(0,0,0, 1);
+}
+
+nav h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 2rem;
+    color: #fff;    
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+section {
+    width: 800px;
+    margin: 50px auto;
+}
+
+section h1 {
+    margin-top: 10px;
+    font-size: 3rem;
+    font-family: 'Dongle', sans-serif;
+    font-weight: bold;
+}
+
+section ul li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+section ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Dongle', sans-serif;
+    font-size: 2.5rem;
+}
+
+section ul li a:hover {
+    color: teal;
+    transition: .2s ease-in-out;
+}
+
+section ul li p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+section p {
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 30px;
+    word-spacing: .1rem;
+    letter-spacing: 0.06rem;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.admin__class a {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+.admin__class a button {
+    display: inline-flex;
+    height: 50px;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+}
+
+.admin__class a button .button__text, .button__icon {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+}
+
+.admin__class a button .button__icon {
+    font-size: 2rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 2.5rem;
+    color: teal;
+}
+
+.admin__class a button .button__text {
+    padding-right: 5px;
+    padding-left: 10px;
+}
+
+.admin__class ul li a {
+    color: black;
+    font-family: 'Dongle', sans-serif;
+    font-size: 2.5rem;
+}
+
+.admin__class ul li p {
+    margin-bottom: 20px;
+}
+
+.admin__class ul li .del {
+    display: inline-flex;
+    height: 40px;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+}
+
+.admin__class ul li .del .button__text, .button__icon {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+}
+
+.admin__class ul li .del .button__text {
+    padding-right: 5px;
+    padding-left: 10px;
+}
+
+.admin__class ul li .del .button__icon {
+    font-size: 2rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 1.5rem;
+    color:  #cc3300;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 50px auto;
+}
+
+form input {
+    margin-bottom: 10px;
+    padding: 15px 15px;
+}
